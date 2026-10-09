@@ -6,3 +6,6 @@ dist*/
 .env
 .env.*
 *.kotoba.json
+data/
+release/
+.release-tools/

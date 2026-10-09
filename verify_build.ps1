@@ -6,7 +6,7 @@ $previousQtPlatform = $env:QT_QPA_PLATFORM
 try {
     $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot"
     $env:QT_QPA_PLATFORM = 'offscreen'
-    $checkProcess = Start-Process -FilePath (Join-Path $appRoot 'dist-v5\Kotoba\Kotoba.exe') -ArgumentList @('--smoke-test', ('"' + $checkFile + '"')) -WindowStyle Hidden -PassThru
+    $checkProcess = Start-Process -FilePath (Join-Path $appRoot 'dist-v6\Kotoba\Kotoba.exe') -ArgumentList @('--smoke-test', ('"' + $checkFile + '"')) -WindowStyle Hidden -PassThru
     if (-not $checkProcess.WaitForExit(20000)) {
         Stop-Process -Id $checkProcess.Id
         throw 'The packaged app did not finish its startup check.'

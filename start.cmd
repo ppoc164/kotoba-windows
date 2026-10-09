@@ -1,11 +1,7 @@
 @echo off
 cd /d "%~dp0"
-if exist "dist-v5\Kotoba\Kotoba.exe" (
-    start "" "dist-v5\Kotoba\Kotoba.exe"
-    exit /b
-)
-if exist "dist-v4\Kotoba\Kotoba.exe" (
-    start "" "dist-v4\Kotoba\Kotoba.exe"
+if exist "dist-v6\Kotoba\Kotoba.exe" (
+    start "" "dist-v6\Kotoba\Kotoba.exe"
     exit /b
 )
 if exist ".venv\Scripts\pythonw.exe" (

@@ -170,7 +170,7 @@ class Window(QMainWindow):
         self.old_btn = QPushButton('导入旧版转写记录')
         self.old_btn.clicked.connect(self.import_old)
         side.addWidget(self.old_btn)
-        privacy = QLabel('本地识别 · 音频不上传\n历史和模型保存在这台电脑')
+        privacy = QLabel('本地识别 · 音频不上传\n历史和模型保存在程序旁的 data')
         privacy.setObjectName('muted')
         side.addWidget(privacy)
         shell.addWidget(sidebar)

@@ -2,6 +2,9 @@ import json
 import os
 import sys
 from pathlib import Path
+from data_paths import data_root, configure_caches
+
+configure_caches()
 
 os.environ.setdefault('HF_HUB_DISABLE_TELEMETRY', '1')
 os.environ.setdefault('HF_HUB_DISABLE_SYMLINKS_WARNING', '1')
@@ -29,7 +32,7 @@ class Transcriber(QThread):
         stage = '加载模型'
         try:
             from faster_whisper import WhisperModel
-            cache = str(Path(os.environ.get('LOCALAPPDATA', str(Path.home()))) / 'Kotoba' / 'models')
+            cache = str(data_root() / 'models')
             self.status.emit('正在加载模型；首次使用会下载模型，请保持联网…')
             # Cached models never need a network connection.
             try:

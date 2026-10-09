@@ -6,6 +6,7 @@ import os
 import uuid
 from datetime import datetime
 from pathlib import Path
+from data_paths import data_root
 
 
 def valid_rows(rows):
@@ -19,7 +20,7 @@ def valid_rows(rows):
 
 class Library:
     def __init__(self, root=None):
-        self.root = Path(root or Path(os.environ.get('LOCALAPPDATA', str(Path.home()))) / 'Kotoba' / 'history')
+        self.root = Path(root) if root is not None else data_root() / 'history'
         self.root.mkdir(parents=True, exist_ok=True)
 
     def key(self, path):
