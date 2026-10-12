@@ -1,12 +1,1 @@
-@echo off
-cd /d "%~dp0"
-if exist "dist-v6\Kotoba\Kotoba.exe" (
-    start "" "dist-v6\Kotoba\Kotoba.exe"
-    exit /b
-)
-if exist ".venv\Scripts\pythonw.exe" (
-    start "" ".venv\Scripts\pythonw.exe" app.py
-    exit /b
-)
-echo Please install Python 3.12, then run setup.cmd first.
-pause
+QGVjaG8gb2ZmDQpjZCAvZCAiJX5kcDAiDQppZiBleGlzdCAiZGlzdC12MTFcS290b2JhXEtvdG9iYS5leGUiICgNCiAgICBzdGFydCAiIiAiZGlzdC12MTFcS290b2JhXEtvdG9iYS5leGUiDQogICAgZXhpdCAvYg0KKQ0KaWYgZXhpc3QgIi52ZW52XFNjcmlwdHNccHl0aG9udy5leGUiICgNCiAgICBzdGFydCAiIiAiLnZlbnZcU2NyaXB0c1xweXRob253LmV4ZSIgYXBwLnB5DQogICAgZXhpdCAvYg0KKQ0KZWNobyBQbGVhc2UgaW5zdGFsbCBQeXRob24gMy4xMiwgdGhlbiBydW4gc2V0dXAuY21kIGZpcnN0Lg0KcGF1c2UNCg==

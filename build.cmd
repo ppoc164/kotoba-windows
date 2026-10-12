@@ -1,10 +1,1 @@
-@echo off
-cd /d "%~dp0"
-.venv\Scripts\python.exe build_icon.py
-if errorlevel 1 exit /b 1
-if exist "dist-v6\Kotoba\data" (
-    echo Existing user data found. Move data to a safe backup before rebuilding.
-    exit /b 1
-)
-.venv\Scripts\python.exe -m PyInstaller --noconfirm --distpath dist-v6 Kotoba.spec
-if errorlevel 1 pause
+QGVjaG8gb2ZmDQpjZCAvZCAiJX5kcDAiDQoudmVudlxTY3JpcHRzXHB5dGhvbi5leGUgYnVpbGRfaWNvbi5weQ0KaWYgZXJyb3JsZXZlbCAxIGV4aXQgL2IgMQ0KaWYgZXhpc3QgImRpc3QtdjExXEtvdG9iYVxkYXRhIiAoDQogICAgZWNobyBFeGlzdGluZyB1c2VyIGRhdGEgZm91bmQuIE1vdmUgZGF0YSB0byBhIHNhZmUgYmFja3VwIGJlZm9yZSByZWJ1aWxkaW5nLg0KICAgIGV4aXQgL2IgMQ0KKQ0KLnZlbnZcU2NyaXB0c1xweXRob24uZXhlIC1tIFB5SW5zdGFsbGVyIC0tbm9jb25maXJtIC0tZGlzdHBhdGggZGlzdC12MTEgS290b2JhLnNwZWMNCmlmIGVycm9ybGV2ZWwgMSBwYXVzZQ0K
